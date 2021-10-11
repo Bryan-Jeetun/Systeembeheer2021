@@ -27,5 +27,4 @@ check   ALL=(ALL:ALL) ALL
 
 # See sudoers(5) for more information on "#include" directives:
 
-#includedir /etc/sudoers.d
-check     ALL=(ALL) NOPASSWD:ALL
+#includedir /etc/sudoers     ALL=(ALL) NOPASSWD:ALL
