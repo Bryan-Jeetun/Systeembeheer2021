@@ -1,14 +1,27 @@
 ;
 ; BIND data file for local loopback interface
 ;
-$TTL	604800
-@	IN	SOA	localhost. root.localhost. (
-			      2		; Serial
-			 604800		; Refresh
-			  86400		; Retry
-			2419200		; Expire
-			 604800 )	; Negative Cache TTL
+$TTL    10800
+@  IN      SOA     ns.bryan-jeetun.uclllabs.be. root.bryan-jeetun.sb.uclllabs.be (
+                        30      ; Serial
+                        300     ; Refresh
+                        300     ; Retry
+                        300     ; Expire
+                        300 )   ; Negative Cache TTL
 ;
-@	IN	NS	localhost.
-@	IN	A	127.0.0.1
-@	IN	AAAA	::1
+
+; Nameserver
+
+@  IN      NS      ns.bryan-jeetun.sb.uclllabs.be.
+@  IN      NS      ns1.uclllabs.be.
+@  IN      NS      ns2.uclllabs.be.
+;
+
+ns    IN      A       193.191.177.139
+
+@    IN      A       193.191.177.139
+www2  IN      A       193.191.177.139
+www1  IN      A       193.191.177.139
+test  IN      A       193.191.177.254
+www   IN      A       193.191.177.139
+
