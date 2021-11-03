@@ -6,10 +6,7 @@
 // organization
 //include "/etc/bind/zones.rfc1918";
 
-zone "bryan-jeetun.sb.uclllabs.be" IN {
+zone "bryan-jeetun.sb.uclllabs.be" {
                 type master;
-                file "/etc/bind/db.bryan-jeetun.sb.uclllabs.be";
-                allow-update { 193.191.177.139; };
-                allow-transfer { 193.191.176.254;193.191.177.4; };
-                notify yes;
+                file "/etc/bind/db.local";
         };
