@@ -58,3 +58,6 @@ check:!::
 incron:!::
 ntp:!::
 bind:!::
+mysql:!::
+redis:!::
+docker:!::

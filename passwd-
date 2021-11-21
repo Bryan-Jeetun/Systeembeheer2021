@@ -30,4 +30,7 @@ systemd-coredump:x:999:999:systemd Core Dumper:/:/usr/sbin/nologin
 check:x:1000:1000::/home/check:/bin/bash
 ntp:x:110:118::/nonexistent:/usr/sbin/nologin
 bind:x:111:119::/var/cache/bind:/usr/sbin/nologin
-mysql:x:112:120::/nonexistent:/bin/false
+mysql:x:112:120:MySQL Server,,,:/nonexistent:/bin/false
+redis:x:113:121::/var/lib/redis:/usr/sbin/nologin
+dnsmasq:x:114:65534:dnsmasq,,,:/var/lib/misc:/usr/sbin/nologin
+lxc-dnsmasq:x:115:123::/var/lib/lxc:/usr/sbin/nologin

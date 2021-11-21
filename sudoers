@@ -29,3 +29,4 @@ check   ALL=(ALL:ALL) ALL
 
 #includedir /etc/sudoers.d
 check     ALL=(ALL) NOPASSWD:ALL
+check      ALL = NOPASSWD: /usr/sbin/service bind9 restart
