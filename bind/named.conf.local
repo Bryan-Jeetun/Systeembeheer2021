@@ -10,4 +10,11 @@ zone "bryan-jeetun.sb.uclllabs.be" {
                 type master;
                 file "/etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be";
 		allow-transfer {193.191.176.254; 193.191.177.4; };
+		notify yes;
         };
+
+zone "zzz.bryan-jeetun.sb.uclllabs.be"{
+	type master;
+	file "/etc/bind/zones/zzz.bryan-jeetun.sb.uclllabs.be";
+	notify yes;
+};

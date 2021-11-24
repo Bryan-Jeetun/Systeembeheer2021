@@ -23,14 +23,14 @@ else
 
 	a2ensite $ZONE.conf
 
-	echo "$ZONE	IN	A	193.191.177.139" >> /etc/bind/db.local
+	echo "$ZONE	IN	A	193.191.177.198" >> /etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be
 
-	SERIAL_NUM=$(grep -Po '\d+(?=\s+; Serial)' /etc/bind/db.local)
-	SERIAL_LIN=$(grep -Po '\s+; Serial' /etc/bind/db.local)
-	SERIAL_ALL=$(grep -Po '\d+\s+; Serial' /etc/bind/db.local)
+	SERIAL_NUM=$(grep -Po '\d+(?=\s+; Serial)' /etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be)
+	SERIAL_LIN=$(grep -Po '\s+; Serial' /etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be)
+	SERIAL_ALL=$(grep -Po '\d+\s+; Serial' /etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be)
 	NEW_NUM=$(("$SERIAL_NUM" + 1))
-	sed -i "s/$SERIAL_ALL/$NEW_NUM$SERIAL_LIN/g" /etc/bind/db.local
+	sed -i "s/$SERIAL_ALL/$NEW_NUM$SERIAL_LIN/g" /etc/bind/zones/db.bryan-jeetun.sb.uclllabs.be
 
-	systemctl restart bind9
-	systemctl restart apache2
+	sudo systemctl restart bind9
+	sudo systemctl restart apache2
 fi

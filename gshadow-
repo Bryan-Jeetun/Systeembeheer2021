@@ -44,8 +44,6 @@ ssl-cert:!::
 input:!::
 kvm:!::
 render:!::
-postfix:!::
-postdrop:!::
 ssh:!::
 systemd-journal:!::
 systemd-network:!::
@@ -61,3 +59,8 @@ bind:!::
 mysql:!::
 redis:!::
 docker:!::
+lxc-dnsmasq:!::
+postfix:!::
+postdrop:!::
+dovecot:!::
+dovenull:!::
