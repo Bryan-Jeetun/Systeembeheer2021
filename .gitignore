@@ -1,2 +1,3 @@
-/etc/incron.d/
+etc/incron.d/
 mrt/
+incron.d/
